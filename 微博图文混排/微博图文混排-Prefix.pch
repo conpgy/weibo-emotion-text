@@ -13,4 +13,35 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import "UIImage+extension.h"
+    #import "MJExtension.h"
+    #import "UIView+extension.h"
+    #import "MBProgressHUD+MJ.h"
+
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+
+/** 表情相关属性 */
+
+// 最大的列数
+#define GYEmotionMaxCols 7
+
+// 最大的行数
+#define GYEmotionMaxRows 3
+
+// 每页最大的表情数
+#define PerPageMaxEmotions (GYEmotionMaxCols * GYEmotionMaxRows - 1)
+
+#define GYEmotionDidSelectedNotification @"GYEmotionDidSelectedNotification"
+
+#define GYEmotionKeyboardDidClickDeleteButtonNotification @"GYEmotionKeyboardDidClickDeleteButtonNotification"
+
+#define GYSelectedEmotion @"GYSelectedEmotion"
+
+#define GYStatusTextFont [UIFont systemFontOfSize:15]
+//[UIFont systemFontOfSize:16]
+
+// 发送微博通知
+#define GYSendWeiboNotification @"GYSendWeiboNotification"
+#define GYStatusContent @"GYStatusContent"
+
 #endif
